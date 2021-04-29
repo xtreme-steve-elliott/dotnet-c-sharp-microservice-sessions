@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using NotesApp.Models;
+using NotesApp.Repositories;
+using NotesApp.Services;
 
 namespace NotesApp
 {
@@ -22,6 +24,8 @@ namespace NotesApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<NotesAppDbContext>(ConfigureDbOptions);
+            services.AddScoped<IModelRepository<Note>, NoteRepository>();
+            services.AddScoped<IModelService<Note>, NoteService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
