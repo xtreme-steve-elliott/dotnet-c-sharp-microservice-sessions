@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using NotesApp.Models;
 
 namespace NotesApp
 {
@@ -19,6 +21,7 @@ namespace NotesApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<NotesAppDbContext>(ConfigureDbOptions);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -46,6 +49,11 @@ namespace NotesApp
             {
                 endpoints.MapControllers();
             });
+        }
+
+        protected virtual void ConfigureDbOptions(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase("notes_app");
         }
     }
 }
