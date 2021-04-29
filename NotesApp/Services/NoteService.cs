@@ -18,5 +18,20 @@ namespace NotesApp.Services
         {
             return _noteRepository.GetAllAsync();
         }
+
+        public Task<Note> GetByIdAsync(long id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Note> AddAsync(Note toAdd)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<bool> DeleteByIdAsync(long id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

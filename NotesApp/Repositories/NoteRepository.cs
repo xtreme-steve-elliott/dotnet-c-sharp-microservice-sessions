@@ -23,5 +23,20 @@ namespace NotesApp.Repositories
         {
             return Task.FromResult(_dbContext.Set<Note>().AsEnumerable() ?? Enumerable.Empty<Note>());
         }
+
+        public Task<Note> GetByIdAsync(long id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Note> AddAsync(Note toAdd)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<bool> DeleteByIdAsync(long id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
