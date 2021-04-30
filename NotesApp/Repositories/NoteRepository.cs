@@ -26,17 +26,28 @@ namespace NotesApp.Repositories
 
         public Task<Note> GetByIdAsync(long id)
         {
-            throw new System.NotImplementedException();
+            return _dbContext.Set<Note>().FindAsync(id).AsTask();
         }
 
-        public Task<Note> AddAsync(Note toAdd)
+        public async Task<Note> AddAsync(Note toAdd)
         {
-            throw new System.NotImplementedException();
+            var entry = await _dbContext.Set<Note>().AddAsync(toAdd);
+            await _dbContext.SaveChangesAsync();
+            return entry.Entity;
         }
 
-        public Task<bool> DeleteByIdAsync(long id)
+        public async Task<bool> DeleteByIdAsync(long id)
         {
-            throw new System.NotImplementedException();
+            var notes = _dbContext.Set<Note>();
+            var foundNote = await notes.FindAsync(id);
+            if (foundNote == null)
+            {
+                return false;
+            }
+
+            notes.Remove(foundNote);
+            await _dbContext.SaveChangesAsync();
+            return true;
         }
     }
 }
