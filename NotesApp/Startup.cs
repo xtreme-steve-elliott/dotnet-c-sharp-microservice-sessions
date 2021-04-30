@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using NotesApp.Models;
 using NotesApp.Repositories;
 using NotesApp.Services;
+using Steeltoe.Connector.MySql.EFCore;
 
 namespace NotesApp
 {
@@ -58,7 +59,7 @@ namespace NotesApp
 
         protected virtual void ConfigureDbOptions(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("notes_app");
+            optionsBuilder.UseMySql(Configuration);
         }
     }
 }
