@@ -26,6 +26,7 @@ namespace NotesApp
             services.AddDbContext<NotesAppDbContext>(ConfigureDbOptions);
             services.AddScoped<IModelRepository<Note>, NoteRepository>();
             services.AddScoped<IModelService<Note>, NoteService>();
+            services.AddRouting(opts => opts.LowercaseUrls = true);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
