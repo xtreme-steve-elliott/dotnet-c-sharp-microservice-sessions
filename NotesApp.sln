@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp", "NotesApp\NotesA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Tests", "NotesApp.Tests\NotesApp.Tests.csproj", "{11D18855-8276-4B40-97FF-A03F04A3DC83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.IntegrationTests", "NotesApp.IntegrationTests\NotesApp.IntegrationTests.csproj", "{6B27CF7A-4C07-45C5-9E0A-74672180727C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{11D18855-8276-4B40-97FF-A03F04A3DC83}.Release|x64.Build.0 = Release|Any CPU
 		{11D18855-8276-4B40-97FF-A03F04A3DC83}.Release|x86.ActiveCfg = Release|Any CPU
 		{11D18855-8276-4B40-97FF-A03F04A3DC83}.Release|x86.Build.0 = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|x64.Build.0 = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Debug|x86.Build.0 = Debug|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|x64.ActiveCfg = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|x64.Build.0 = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B27CF7A-4C07-45C5-9E0A-74672180727C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
